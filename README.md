@@ -26,16 +26,17 @@ cd image-sorter
 ```
 Install dependencies:
 
-bash
+```bash
 Copy code
 pip install numpy tqdm scipy torch torchvision Pillow faiss-cpu
+```
 For GPU support: install faiss-gpu and ensure CUDA is set up.
 Note: No internet required after initial model weights download.
 
 ⚡ Usage
 Run the script with:
 
-bash
+```bash
 Copy code
 python sorter.py [arguments]
 Command-Line Arguments
@@ -45,11 +46,13 @@ Argument	Description	Default
 -i <input_folder>	Folder with source images	input_images
 -o <output_folder>	Folder for sorted images	sorted_images
 --cpu	Force CPU usage	-
+```
 
 Example
-bash
+```bash
 Copy code
 python sorter.py -m convnext_small -i my_images -o sorted_output --more_scan
+```
 🛠 How It Works
 Feature Extraction: Loads a pre-trained model and extracts feature vectors from images.
 Cached in a SQLite DB (features_db_<model>.sqlite).
@@ -81,15 +84,17 @@ Place images in input_images
 
 Run:
 
-bash
+```bash
 Copy code
 python sorter.py
+```
 Sorted copies appear in sorted_images.
 
 Advanced Run
-bash
+```bash
 Copy code
 python sorter.py -m mobilenet_v3_small --cpu -i photos -o sorted_photos
+```
 Uses lightweight model on CPU, suitable for large datasets without GPU.
 
 ⚡ Performance Tips
