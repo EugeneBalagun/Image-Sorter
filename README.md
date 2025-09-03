@@ -5,7 +5,7 @@ It extracts features, builds a similarity graph, computes a **Minimum Spanning T
 Sorted images are copied to an output folder with renamed files for easy sequential viewing.
 
 ---
-![Описание картинки](screens/1.jpg)
+![](1.jpg)
 
 
 ## 🚀 Key Features
